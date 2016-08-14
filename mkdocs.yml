@@ -1,0 +1,4 @@
+site_name: 'LinConf'
+docs_dir: '.'
+site_dir: 'www'
+theme: readthedocs
