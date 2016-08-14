@@ -1,6 +1,0 @@
-site_name: 'My Docs'
-docs_dir: '.'
-pages:
-- Home: index.md
-- About: ansible-cron/index.md
-theme: readthedocs
