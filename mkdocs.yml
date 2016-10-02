@@ -1,4 +1,16 @@
 site_name: 'LinConf'
-docs_dir: '.'
+site_url: http://linconf.com
+pages:
+- Ansible Roles: 
+    - 'ansible-users': 'ansible-users/index.md'
+- About:
+    - 'Introduction': 'index.md'
+    - 'Methodology': 'about/methodology.md'
+    - 'Contributing': 'about/contributing.md'
+    - 'License': 'about/license.md'
+docs_dir: 'docs'
 site_dir: 'www'
 theme: readthedocs
+
+copyright: Copyright &copy; 2016 <a href="http://linconf.com">LinConf</a>.
+google_analytics: ['', 'linconf.com']

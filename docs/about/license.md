@@ -1,4 +1,4 @@
-MIT License
+## LinConf License (MIT)
 
 Copyright (c) 2016 Chad Sheets
 
