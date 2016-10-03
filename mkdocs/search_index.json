@@ -1,0 +1,59 @@
+{
+    "docs": [
+        {
+            "location": "/ansible-users/", 
+            "text": "Introduction\n\n\nThis is a placeholder for ansible-users documentation", 
+            "title": "ansible-users"
+        }, 
+        {
+            "location": "/ansible-users/#introduction", 
+            "text": "This is a placeholder for ansible-users documentation", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/", 
+            "text": "LinConf Documentation\n\n\nCollection of Ansible roles following the orginizations Methodology.\n\n\nOverview\n\n\nSupport documents for \nAnsible\n roles published to \nLinConf on GitHub\n.\n\n\nThis is a placeholder for an introduction", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#linconf-documentation", 
+            "text": "Collection of Ansible roles following the orginizations Methodology.", 
+            "title": "LinConf Documentation"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "Support documents for  Ansible  roles published to  LinConf on GitHub .  This is a placeholder for an introduction", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/about/methodology/", 
+            "text": "LinConf Objectives\n\n\nThis is a placeholder for a methodology description", 
+            "title": "Methodology"
+        }, 
+        {
+            "location": "/about/methodology/#linconf-objectives", 
+            "text": "This is a placeholder for a methodology description", 
+            "title": "LinConf Objectives"
+        }, 
+        {
+            "location": "/about/contributing/", 
+            "text": "Contributing to LinConf\n\n\nThis is a placeholder for contribution instructions", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/about/contributing/#contributing-to-linconf", 
+            "text": "This is a placeholder for contribution instructions", 
+            "title": "Contributing to LinConf"
+        }, 
+        {
+            "location": "/about/license/", 
+            "text": "LinConf License (MIT)\n\n\nCopyright (c) 2016 Chad Sheets\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/about/license/#linconf-license-mit", 
+            "text": "Copyright (c) 2016 Chad Sheets  Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.", 
+            "title": "LinConf License (MIT)"
+        }
+    ]
+}
