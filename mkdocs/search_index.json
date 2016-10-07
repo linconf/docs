@@ -2,13 +2,38 @@
     "docs": [
         {
             "location": "/ansible-users/", 
-            "text": "Introduction\n\n\nThis is a placeholder for ansible-users documentation", 
+            "text": "linconf.users\n allows you to configure users and groups in an organized manner.\nFor simple or one-off cases see the \nAnsible user module\n.\n\n\nInstallation\n\n\nRun the following command to install from Ansible Galaxy.\n\n\nansible-galaxy install linconf.users\n\n\n\n\nDependencies\n\n\n\n\nNone\n\n\n\n\nThe latest stable release of Ansible is assumed, however most LinConf roles will run\non earlier versions as well.\n\n\nExample Use\n\n\nAdd a User\n\n\n- hosts: localhost\n  roles:\n      - linconf.users\n  vars:\n    users_accounts:\n        - name: 'NewUser'\n        group: 'NewUser'\n        # Additional Groups\n        groups: ['wheel', 'users']\n        password: '$6$c6pQJ3kzW80oZwTi$...'\n        update_password: 'always'\n\n\n\n\nPassword hash created using: \nmkpasswd --method=SHA-512\n\n\nRemove a User\n\n\nusers_accounts:\n    - name: 'NewUser'\n    state: absent\n\n\n\n\nAdd a Group\n\n\nusers_groups:\n    - name: 'NewGroup'\n\n\n\n\nWhenever you add a user to a group that doesn't yet exist on the system (using\nthe \ngroups:\n option of \nusers_accounts\n) you must also use \nusers_groups\n to\nadd the group to the system.\n\n\nRole Variables\n\n\nAll variables are optional.\n\n\n\n\nusers_system_uid: False\n - All users without specified uids will recieve uids less than 1000 per convention.\n\n\nusers_accounts: []\n - Expects a list of users to add, only \nname:\n is required.\n\n\noption:\n - see \nAnsible user module\n for options\n\n\n\n\n\n\nusers_groups: []\n - Expects a list of groups to add\n\n\noption:\n - see \nAnsible group module\n for options\n\n\n\n\n\n\n\n\nAdditional Options\n\n\nThis role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.\n\n\n\n\nusers_accounts: []\n\n\nusers_host_accounts: []\n\n\nusers_group_accounts: []\n\n\nusers_groups: []\n\n\nusers_host_groups: []\n\n\nusers_group_groups: []\n\n\n\n\nRole Tags\n\n\nIncluding the \n--tags\n or \n--skip-tags\n parameters allows the execution\nof only parts of certain roles.\n\n\nAvailable Tags:\n\n\n\n\nusers\n - Primary role tag, executes all role tasks\n\n\n\n\nAdditional\n\n\n Testing \n\n\nThe master branch is continuously validated by Travis-CI.\n\n\nMinor versions indicate the role passed local testing as described by the\n\n.kitchen\n declaration. Instructions for performing test-kitchen runs locally\nare detailed in the \nLinConf Documentation\n.\n\n\n Author and License \n\n\nChad Sheets - \nGitHub\n | \nBlog\n | \nEmail\n\n\nReleased under the \nMIT License", 
             "title": "ansible-users"
         }, 
         {
-            "location": "/ansible-users/#introduction", 
-            "text": "This is a placeholder for ansible-users documentation", 
-            "title": "Introduction"
+            "location": "/ansible-users/#installation", 
+            "text": "Run the following command to install from Ansible Galaxy.  ansible-galaxy install linconf.users", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/ansible-users/#dependencies", 
+            "text": "None   The latest stable release of Ansible is assumed, however most LinConf roles will run\non earlier versions as well.", 
+            "title": "Dependencies"
+        }, 
+        {
+            "location": "/ansible-users/#example-use", 
+            "text": "Add a User  - hosts: localhost\n  roles:\n      - linconf.users\n  vars:\n    users_accounts:\n        - name: 'NewUser'\n        group: 'NewUser'\n        # Additional Groups\n        groups: ['wheel', 'users']\n        password: '$6$c6pQJ3kzW80oZwTi$...'\n        update_password: 'always'  Password hash created using:  mkpasswd --method=SHA-512  Remove a User  users_accounts:\n    - name: 'NewUser'\n    state: absent  Add a Group  users_groups:\n    - name: 'NewGroup'  Whenever you add a user to a group that doesn't yet exist on the system (using\nthe  groups:  option of  users_accounts ) you must also use  users_groups  to\nadd the group to the system.", 
+            "title": "Example Use"
+        }, 
+        {
+            "location": "/ansible-users/#role-variables", 
+            "text": "All variables are optional.   users_system_uid: False  - All users without specified uids will recieve uids less than 1000 per convention.  users_accounts: []  - Expects a list of users to add, only  name:  is required.  option:  - see  Ansible user module  for options    users_groups: []  - Expects a list of groups to add  option:  - see  Ansible group module  for options     Additional Options  This role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.   users_accounts: []  users_host_accounts: []  users_group_accounts: []  users_groups: []  users_host_groups: []  users_group_groups: []", 
+            "title": "Role Variables"
+        }, 
+        {
+            "location": "/ansible-users/#role-tags", 
+            "text": "Including the  --tags  or  --skip-tags  parameters allows the execution\nof only parts of certain roles.  Available Tags:   users  - Primary role tag, executes all role tasks", 
+            "title": "Role Tags"
+        }, 
+        {
+            "location": "/ansible-users/#additional", 
+            "text": "Testing   The master branch is continuously validated by Travis-CI.  Minor versions indicate the role passed local testing as described by the .kitchen  declaration. Instructions for performing test-kitchen runs locally\nare detailed in the  LinConf Documentation .   Author and License   Chad Sheets -  GitHub  |  Blog  |  Email  Released under the  MIT License", 
+            "title": "Additional"
         }, 
         {
             "location": "/", 

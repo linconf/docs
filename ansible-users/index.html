@@ -75,7 +75,22 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                <li class="toctree-l3"><a href="#installation">Installation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#dependencies">Dependencies</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#example-use">Example Use</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#role-variables">Role Variables</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#role-tags">Role Tags</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#additional">Additional</a></li>
                 
             
             </ul>
@@ -158,8 +173,89 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
-<p>This is a placeholder for ansible-users documentation</p>
+                <p><code>linconf.users</code> allows you to configure users and groups in an organized manner.
+For simple or one-off cases see the <a href="http://docs.ansible.com/ansible/user_module.html">Ansible user module</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>Run the following command to install from Ansible Galaxy.</p>
+<pre><code>ansible-galaxy install linconf.users
+</code></pre>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>The latest stable release of Ansible is assumed, however most LinConf roles will run
+on earlier versions as well.</p>
+<h2 id="example-use">Example Use</h2>
+<p><strong>Add a User</strong></p>
+<pre><code>- hosts: localhost
+  roles:
+      - linconf.users
+  vars:
+    users_accounts:
+        - name: 'NewUser'
+        group: 'NewUser'
+        # Additional Groups
+        groups: ['wheel', 'users']
+        password: '$6$c6pQJ3kzW80oZwTi$...'
+        update_password: 'always'
+</code></pre>
+
+<p>Password hash created using: <code>mkpasswd --method=SHA-512</code></p>
+<p><strong>Remove a User</strong></p>
+<pre><code>users_accounts:
+    - name: 'NewUser'
+    state: absent
+</code></pre>
+
+<p><strong>Add a Group</strong></p>
+<pre><code>users_groups:
+    - name: 'NewGroup'
+</code></pre>
+
+<p>Whenever you add a user to a group that doesn't yet exist on the system (using
+the <code>groups:</code> option of <code>users_accounts</code>) you must also use <code>users_groups</code> to
+add the group to the system.</p>
+<h2 id="role-variables">Role Variables</h2>
+<p>All variables are optional.</p>
+<ul>
+<li><code>users_system_uid: False</code> - All users without specified uids will recieve uids less than 1000 per convention.</li>
+<li><code>users_accounts: []</code> - Expects a list of users to add, only <strong>name:</strong> is required.<ul>
+<li><code>option:</code> - see <a href="http://docs.ansible.com/ansible/user_module.html">Ansible user module</a> for options</li>
+</ul>
+</li>
+<li><code>users_groups: []</code> - Expects a list of groups to add<ul>
+<li><code>option:</code> - see <a href="http://docs.ansible.com/ansible/group_module.html">Ansible group module</a> for options</li>
+</ul>
+</li>
+</ul>
+<p><strong>Additional Options</strong></p>
+<p>This role has 3 lists for users, and 3 lists for groups. This can be useful in 
+situations where groups of hosts share the same users.</p>
+<ul>
+<li><code>users_accounts: []</code></li>
+<li><code>users_host_accounts: []</code></li>
+<li><code>users_group_accounts: []</code></li>
+<li><code>users_groups: []</code></li>
+<li><code>users_host_groups: []</code></li>
+<li><code>users_group_groups: []</code></li>
+</ul>
+<h2 id="role-tags">Role Tags</h2>
+<p>Including the <code>--tags</code> or <code>--skip-tags</code> parameters allows the execution
+of only parts of certain roles.</p>
+<p><strong>Available Tags:</strong></p>
+<ul>
+<li><code>users</code> - Primary role tag, executes all role tasks</li>
+</ul>
+<h2 id="additional">Additional</h2>
+<p><strong> Testing </strong></p>
+<p>The master branch is continuously validated by Travis-CI.</p>
+<p>Minor versions indicate the role passed local testing as described by the
+<code>.kitchen</code> declaration. Instructions for performing test-kitchen runs locally
+are detailed in the <a href="http://linconf.com/about/methodology/">LinConf Documentation</a>.</p>
+<p><strong> Author and License </strong></p>
+<p>Chad Sheets - <a href="https://github.com/cjsheets">GitHub</a> | <a href="http://chadsheets.com/">Blog</a> | <a href="mailto:chad@linconf.com">Email</a></p>
+<p>Released under the <a href="https://tldrlegal.com/license/mit-license">MIT License</a></p>
               
             </div>
           </div>
