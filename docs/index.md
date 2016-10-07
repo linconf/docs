@@ -1,3 +1,5 @@
+<h1>LinConf Documentation</h1>
+
 [LinConf](https://github.com/linconf) is a collection of Ansible roles on GitHub
 targeted at Debian/Ubuntu and CentOS/RHEL systems.
 
@@ -8,7 +10,7 @@ roles.
 
 ## Design
 
-Roles are written with precidence given to the following (in order):
+Roles are written with precedence given to the following (in order):
 
 1. Simplicity
 2. Dependency-Free
@@ -22,8 +24,8 @@ Roles are written with precidence given to the following (in order):
 roles. If required dependency resolution and configuration isn't managed by a distributions
 package manager, it will likely require more than one role.
 
-** Functionality ** - Where possible and without sacraficing simplicity, roles are
-written to be as useful as possible (notibly at the occasional expense of idempotance)
+** Functionality ** - Where possible and without sacrificing simplicity, roles are
+written to be as useful as possible (notably at the occasional expense of idempotance)
 
 ** Idempotance ** - A very useful and important feature of Ansible, roles that fail
 to maintain idempotance will, where possible, present tags allowing idempotant 

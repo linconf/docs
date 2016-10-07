@@ -1,3 +1,4 @@
+<h1>Ansible Role: users</h1>
 
 `linconf.users` allows you to configure users and groups in an organized manner.
 For simple or one-off cases see the [Ansible user module](http://docs.ansible.com/ansible/user_module.html).
@@ -64,7 +65,7 @@ add the group to the system.
 
 All variables are optional.
 
-- `users_system_uid: False` - All users without specified uids will recieve uids less than 1000 per convention.
+- `users_system_uid: False` - All users without specified uids will receive uids less than 1000 per convention.
 - `users_accounts: []` - Expects a list of users to add, only **name:** is required.
     - `option:` - see [Ansible user module](http://docs.ansible.com/ansible/user_module.html) for options
 - `users_groups: []` - Expects a list of groups to add

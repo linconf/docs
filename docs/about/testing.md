@@ -1,3 +1,6 @@
-# Objectives
+<h1>Testing</h1>
 
-This is a placeholder for a methodology description
+Roles are tested locally using Vagrant or Docker as well as on each commit using
+Travis-CI. 
+
+Details relating to testing methods will be added here.

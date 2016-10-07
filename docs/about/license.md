@@ -1,3 +1,10 @@
+<h1>License</h1>
+
+All [LinConf](https://github.com/linconf) authored roles are released under the 
+[MIT License](https://tldrlegal.com/license/mit-license) unless otherwise stated. 
+Some roles posted in [LinConf](https://github.com/linconf) are forked from other 
+repositories in which case their original license is retained. 
+
 ## LinConf License (MIT)
 
 Copyright (c) 2016 Chad Sheets
