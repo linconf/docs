@@ -5,7 +5,7 @@ pages:
     - 'ansible-users': 'ansible-users/index.md'
 - About:
     - 'Introduction': 'index.md'
-    - 'Methodology': 'about/methodology.md'
+    - 'Testing': 'about/testing.md'
     - 'Contributing': 'about/contributing.md'
     - 'License': 'about/license.md'
 docs_dir: 'docs'
@@ -13,4 +13,4 @@ site_dir: 'www'
 theme: readthedocs
 
 copyright: Copyright &copy; 2016 <a href="http://linconf.com">LinConf</a>.
-google_analytics: ['', 'linconf.com']
+google_analytics: ['UA-10006093-4', 'linconf.com']
