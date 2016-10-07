@@ -40,7 +40,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '', 'linconf.com');
+      ga('create', 'UA-10006093-4', 'linconf.com');
       ga('send', 'pageview');
   </script>
   
@@ -93,7 +93,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../methodology/">Methodology</a>
+        <a class="" href="../testing/">Testing</a>
         
     </li>
 
@@ -104,7 +104,10 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#contributing-to-linconf">Contributing to LinConf</a></li>
+                <li class="toctree-l3"><a href="#write-tests">Write Tests</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#document">Document</a></li>
                 
             
             </ul>
@@ -158,8 +161,27 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="contributing-to-linconf">Contributing to LinConf</h1>
-<p>This is a placeholder for contribution instructions</p>
+                <h1>Contributing</h1>
+
+<p>All contributions to LinConf are welcome including bug reports, fixes, extensions,
+documentation or ideas. GitHub is the best place to contribute in each individual
+project.</p>
+<p>If you are unfamiliar with GitHub there is an excellent guide on contributing
+<a href="https://guides.github.com/activities/contributing-to-open-source/#contributing">here</a>.</p>
+<p>If you add code or provide a fix, please keep the following in mind.</p>
+<h2 id="write-tests">Write Tests</h2>
+<p>Every role in LinConf includes integration tests which are run through vagrant
+VMs or docker containers.</p>
+<p>If you add a new feature, please also write a test to confirm the configuration 
+is being correctly applied.</p>
+<h2 id="document">Document</h2>
+<p>One goal of the LinConf project is maintaining simplicity and reusability of roles.
+To achieve these ends, well documented and readable code is necessary.</p>
+<ul>
+<li>Please avoid using non-sensible names for variables</li>
+<li>Add messages that communicate failures or misconfiguration to users</li>
+<li>Feel free to add to the documentation at in the linconf/docs repository</li>
+</ul>
               
             </div>
           </div>
@@ -170,7 +192,7 @@
         <a href="../license/" class="btn btn-neutral float-right" title="License">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../methodology/" class="btn btn-neutral" title="Methodology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../testing/" class="btn btn-neutral" title="Testing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -198,7 +220,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../methodology/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../testing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>

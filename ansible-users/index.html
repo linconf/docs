@@ -40,7 +40,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '', 'linconf.com');
+      ga('create', 'UA-10006093-4', 'linconf.com');
       ga('send', 'pageview');
   </script>
   
@@ -115,7 +115,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../about/methodology/">Methodology</a>
+        <a class="" href="../about/testing/">Testing</a>
         
     </li>
 
@@ -173,7 +173,9 @@
           <div role="main">
             <div class="section">
               
-                <p><code>linconf.users</code> allows you to configure users and groups in an organized manner.
+                <h1>Ansible Role: users</h1>
+
+<p><code>linconf.users</code> allows you to configure users and groups in an organized manner.
 For simple or one-off cases see the <a href="http://docs.ansible.com/ansible/user_module.html">Ansible user module</a>.</p>
 <h2 id="installation">Installation</h2>
 <p>Run the following command to install from Ansible Galaxy.</p>
@@ -219,7 +221,7 @@ add the group to the system.</p>
 <h2 id="role-variables">Role Variables</h2>
 <p>All variables are optional.</p>
 <ul>
-<li><code>users_system_uid: False</code> - All users without specified uids will recieve uids less than 1000 per convention.</li>
+<li><code>users_system_uid: False</code> - All users without specified uids will receive uids less than 1000 per convention.</li>
 <li><code>users_accounts: []</code> - Expects a list of users to add, only <strong>name:</strong> is required.<ul>
 <li><code>option:</code> - see <a href="http://docs.ansible.com/ansible/user_module.html">Ansible user module</a> for options</li>
 </ul>

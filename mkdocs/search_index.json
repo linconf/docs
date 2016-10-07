@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/ansible-users/", 
-            "text": "linconf.users\n allows you to configure users and groups in an organized manner.\nFor simple or one-off cases see the \nAnsible user module\n.\n\n\nInstallation\n\n\nRun the following command to install from Ansible Galaxy.\n\n\nansible-galaxy install linconf.users\n\n\n\n\nDependencies\n\n\n\n\nNone\n\n\n\n\nThe latest stable release of Ansible is assumed, however most LinConf roles will run\non earlier versions as well.\n\n\nExample Use\n\n\nAdd a User\n\n\n- hosts: localhost\n  roles:\n      - linconf.users\n  vars:\n    users_accounts:\n        - name: 'NewUser'\n        group: 'NewUser'\n        # Additional Groups\n        groups: ['wheel', 'users']\n        password: '$6$c6pQJ3kzW80oZwTi$...'\n        update_password: 'always'\n\n\n\n\nPassword hash created using: \nmkpasswd --method=SHA-512\n\n\nRemove a User\n\n\nusers_accounts:\n    - name: 'NewUser'\n    state: absent\n\n\n\n\nAdd a Group\n\n\nusers_groups:\n    - name: 'NewGroup'\n\n\n\n\nWhenever you add a user to a group that doesn't yet exist on the system (using\nthe \ngroups:\n option of \nusers_accounts\n) you must also use \nusers_groups\n to\nadd the group to the system.\n\n\nRole Variables\n\n\nAll variables are optional.\n\n\n\n\nusers_system_uid: False\n - All users without specified uids will recieve uids less than 1000 per convention.\n\n\nusers_accounts: []\n - Expects a list of users to add, only \nname:\n is required.\n\n\noption:\n - see \nAnsible user module\n for options\n\n\n\n\n\n\nusers_groups: []\n - Expects a list of groups to add\n\n\noption:\n - see \nAnsible group module\n for options\n\n\n\n\n\n\n\n\nAdditional Options\n\n\nThis role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.\n\n\n\n\nusers_accounts: []\n\n\nusers_host_accounts: []\n\n\nusers_group_accounts: []\n\n\nusers_groups: []\n\n\nusers_host_groups: []\n\n\nusers_group_groups: []\n\n\n\n\nRole Tags\n\n\nIncluding the \n--tags\n or \n--skip-tags\n parameters allows the execution\nof only parts of certain roles.\n\n\nAvailable Tags:\n\n\n\n\nusers\n - Primary role tag, executes all role tasks\n\n\n\n\nAdditional\n\n\n Testing \n\n\nThe master branch is continuously validated by Travis-CI.\n\n\nMinor versions indicate the role passed local testing as described by the\n\n.kitchen\n declaration. Instructions for performing test-kitchen runs locally\nare detailed in the \nLinConf Documentation\n.\n\n\n Author and License \n\n\nChad Sheets - \nGitHub\n | \nBlog\n | \nEmail\n\n\nReleased under the \nMIT License", 
+            "text": "Ansible Role: users\n\n\n\nlinconf.users\n allows you to configure users and groups in an organized manner.\nFor simple or one-off cases see the \nAnsible user module\n.\n\n\nInstallation\n\n\nRun the following command to install from Ansible Galaxy.\n\n\nansible-galaxy install linconf.users\n\n\n\n\nDependencies\n\n\n\n\nNone\n\n\n\n\nThe latest stable release of Ansible is assumed, however most LinConf roles will run\non earlier versions as well.\n\n\nExample Use\n\n\nAdd a User\n\n\n- hosts: localhost\n  roles:\n      - linconf.users\n  vars:\n    users_accounts:\n        - name: 'NewUser'\n        group: 'NewUser'\n        # Additional Groups\n        groups: ['wheel', 'users']\n        password: '$6$c6pQJ3kzW80oZwTi$...'\n        update_password: 'always'\n\n\n\n\nPassword hash created using: \nmkpasswd --method=SHA-512\n\n\nRemove a User\n\n\nusers_accounts:\n    - name: 'NewUser'\n    state: absent\n\n\n\n\nAdd a Group\n\n\nusers_groups:\n    - name: 'NewGroup'\n\n\n\n\nWhenever you add a user to a group that doesn't yet exist on the system (using\nthe \ngroups:\n option of \nusers_accounts\n) you must also use \nusers_groups\n to\nadd the group to the system.\n\n\nRole Variables\n\n\nAll variables are optional.\n\n\n\n\nusers_system_uid: False\n - All users without specified uids will receive uids less than 1000 per convention.\n\n\nusers_accounts: []\n - Expects a list of users to add, only \nname:\n is required.\n\n\noption:\n - see \nAnsible user module\n for options\n\n\n\n\n\n\nusers_groups: []\n - Expects a list of groups to add\n\n\noption:\n - see \nAnsible group module\n for options\n\n\n\n\n\n\n\n\nAdditional Options\n\n\nThis role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.\n\n\n\n\nusers_accounts: []\n\n\nusers_host_accounts: []\n\n\nusers_group_accounts: []\n\n\nusers_groups: []\n\n\nusers_host_groups: []\n\n\nusers_group_groups: []\n\n\n\n\nRole Tags\n\n\nIncluding the \n--tags\n or \n--skip-tags\n parameters allows the execution\nof only parts of certain roles.\n\n\nAvailable Tags:\n\n\n\n\nusers\n - Primary role tag, executes all role tasks\n\n\n\n\nAdditional\n\n\n Testing \n\n\nThe master branch is continuously validated by Travis-CI.\n\n\nMinor versions indicate the role passed local testing as described by the\n\n.kitchen\n declaration. Instructions for performing test-kitchen runs locally\nare detailed in the \nLinConf Documentation\n.\n\n\n Author and License \n\n\nChad Sheets - \nGitHub\n | \nBlog\n | \nEmail\n\n\nReleased under the \nMIT License", 
             "title": "ansible-users"
         }, 
         {
@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/ansible-users/#role-variables", 
-            "text": "All variables are optional.   users_system_uid: False  - All users without specified uids will recieve uids less than 1000 per convention.  users_accounts: []  - Expects a list of users to add, only  name:  is required.  option:  - see  Ansible user module  for options    users_groups: []  - Expects a list of groups to add  option:  - see  Ansible group module  for options     Additional Options  This role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.   users_accounts: []  users_host_accounts: []  users_group_accounts: []  users_groups: []  users_host_groups: []  users_group_groups: []", 
+            "text": "All variables are optional.   users_system_uid: False  - All users without specified uids will receive uids less than 1000 per convention.  users_accounts: []  - Expects a list of users to add, only  name:  is required.  option:  - see  Ansible user module  for options    users_groups: []  - Expects a list of groups to add  option:  - see  Ansible group module  for options     Additional Options  This role has 3 lists for users, and 3 lists for groups. This can be useful in \nsituations where groups of hosts share the same users.   users_accounts: []  users_host_accounts: []  users_group_accounts: []  users_groups: []  users_host_groups: []  users_group_groups: []", 
             "title": "Role Variables"
         }, 
         {
@@ -37,42 +37,52 @@
         }, 
         {
             "location": "/", 
-            "text": "LinConf Documentation\n\n\nCollection of Ansible roles following the orginizations Methodology.\n\n\nOverview\n\n\nSupport documents for \nAnsible\n roles published to \nLinConf on GitHub\n.\n\n\nThis is a placeholder for an introduction", 
+            "text": "LinConf Documentation\n\n\n\nLinConf\n is a collection of Ansible roles on GitHub\ntargeted at Debian/Ubuntu and CentOS/RHEL systems.\n\n\nEach role is written with ease-of-use and ease-of-interpretation in mind. Released\nunder the MIT license, roles also make good building blocks for more specialized\nroles.\n\n\nDesign\n\n\nRoles are written with precedence given to the following (in order):\n\n\n\n\nSimplicity\n\n\nDependency-Free\n\n\nFunctionality\n\n\nIdempotance\n\n\n\n\n Simplicity \n - Roles should be easy to read and easy to follow whenever possible.\n\n\n Dependency-Free \n - Wherever practical, different functions are broken into different\nroles. If required dependency resolution and configuration isn't managed by a distributions\npackage manager, it will likely require more than one role.\n\n\n Functionality \n - Where possible and without sacrificing simplicity, roles are\nwritten to be as useful as possible (notably at the occasional expense of idempotance)\n\n\n Idempotance \n - A very useful and important feature of Ansible, roles that fail\nto maintain idempotance will, where possible, present tags allowing idempotant \nexecution (by disabling some actions).\n\n\nTesting\n\n\nRoles are tested locally using Vagrant or Docker as well as on each commit using\nTravis-CI. See the Testing page for more detailed information about testing methods.\n\n\nAuthor\n\n\nChad Sheets - \nGitHub\n | \nBlog\n | \nEmail\n\n\nLicense\n\n\nAll LinConf authored roles are released under the \nMIT License\n\nunless otherwise stated. Some roles posted in LinConf are forked from other repositories\nin which case their original license is retained.", 
             "title": "Introduction"
         }, 
         {
-            "location": "/#linconf-documentation", 
-            "text": "Collection of Ansible roles following the orginizations Methodology.", 
-            "title": "LinConf Documentation"
+            "location": "/#design", 
+            "text": "Roles are written with precedence given to the following (in order):   Simplicity  Dependency-Free  Functionality  Idempotance    Simplicity   - Roles should be easy to read and easy to follow whenever possible.   Dependency-Free   - Wherever practical, different functions are broken into different\nroles. If required dependency resolution and configuration isn't managed by a distributions\npackage manager, it will likely require more than one role.   Functionality   - Where possible and without sacrificing simplicity, roles are\nwritten to be as useful as possible (notably at the occasional expense of idempotance)   Idempotance   - A very useful and important feature of Ansible, roles that fail\nto maintain idempotance will, where possible, present tags allowing idempotant \nexecution (by disabling some actions).", 
+            "title": "Design"
         }, 
         {
-            "location": "/#overview", 
-            "text": "Support documents for  Ansible  roles published to  LinConf on GitHub .  This is a placeholder for an introduction", 
-            "title": "Overview"
+            "location": "/#testing", 
+            "text": "Roles are tested locally using Vagrant or Docker as well as on each commit using\nTravis-CI. See the Testing page for more detailed information about testing methods.", 
+            "title": "Testing"
         }, 
         {
-            "location": "/about/methodology/", 
-            "text": "LinConf Objectives\n\n\nThis is a placeholder for a methodology description", 
-            "title": "Methodology"
+            "location": "/#author", 
+            "text": "Chad Sheets -  GitHub  |  Blog  |  Email", 
+            "title": "Author"
         }, 
         {
-            "location": "/about/methodology/#linconf-objectives", 
-            "text": "This is a placeholder for a methodology description", 
-            "title": "LinConf Objectives"
+            "location": "/#license", 
+            "text": "All LinConf authored roles are released under the  MIT License \nunless otherwise stated. Some roles posted in LinConf are forked from other repositories\nin which case their original license is retained.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/about/testing/", 
+            "text": "Testing\n\n\n\nRoles are tested locally using Vagrant or Docker as well as on each commit using\nTravis-CI. \n\n\nDetails relating to testing methods will be added here.", 
+            "title": "Testing"
         }, 
         {
             "location": "/about/contributing/", 
-            "text": "Contributing to LinConf\n\n\nThis is a placeholder for contribution instructions", 
+            "text": "Contributing\n\n\n\nAll contributions to LinConf are welcome including bug reports, fixes, extensions,\ndocumentation or ideas. GitHub is the best place to contribute in each individual\nproject.\n\n\nIf you are unfamiliar with GitHub there is an excellent guide on contributing\n\nhere\n.\n\n\nIf you add code or provide a fix, please keep the following in mind.\n\n\nWrite Tests\n\n\nEvery role in LinConf includes integration tests which are run through vagrant\nVMs or docker containers.\n\n\nIf you add a new feature, please also write a test to confirm the configuration \nis being correctly applied.\n\n\nDocument\n\n\nOne goal of the LinConf project is maintaining simplicity and reusability of roles.\nTo achieve these ends, well documented and readable code is necessary.\n\n\n\n\nPlease avoid using non-sensible names for variables\n\n\nAdd messages that communicate failures or misconfiguration to users\n\n\nFeel free to add to the documentation at in the linconf/docs repository", 
             "title": "Contributing"
         }, 
         {
-            "location": "/about/contributing/#contributing-to-linconf", 
-            "text": "This is a placeholder for contribution instructions", 
-            "title": "Contributing to LinConf"
+            "location": "/about/contributing/#write-tests", 
+            "text": "Every role in LinConf includes integration tests which are run through vagrant\nVMs or docker containers.  If you add a new feature, please also write a test to confirm the configuration \nis being correctly applied.", 
+            "title": "Write Tests"
+        }, 
+        {
+            "location": "/about/contributing/#document", 
+            "text": "One goal of the LinConf project is maintaining simplicity and reusability of roles.\nTo achieve these ends, well documented and readable code is necessary.   Please avoid using non-sensible names for variables  Add messages that communicate failures or misconfiguration to users  Feel free to add to the documentation at in the linconf/docs repository", 
+            "title": "Document"
         }, 
         {
             "location": "/about/license/", 
-            "text": "LinConf License (MIT)\n\n\nCopyright (c) 2016 Chad Sheets\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.", 
+            "text": "License\n\n\n\nAll \nLinConf\n authored roles are released under the \n\nMIT License\n unless otherwise stated. \nSome roles posted in \nLinConf\n are forked from other \nrepositories in which case their original license is retained. \n\n\nLinConf License (MIT)\n\n\nCopyright (c) 2016 Chad Sheets\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.", 
             "title": "License"
         }, 
         {

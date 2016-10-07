@@ -40,7 +40,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '', 'linconf.com');
+      ga('create', 'UA-10006093-4', 'linconf.com');
       ga('send', 'pageview');
   </script>
   
@@ -90,10 +90,16 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#linconf-documentation">LinConf Documentation</a></li>
+                <li class="toctree-l3"><a href="#design">Design</a></li>
                 
             
-                <li class="toctree-l3"><a href="#overview">Overview</a></li>
+                <li class="toctree-l3"><a href="#testing">Testing</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#author">Author</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#license">License</a></li>
                 
             
             </ul>
@@ -103,7 +109,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="about/methodology/">Methodology</a>
+        <a class="" href="about/testing/">Testing</a>
         
     </li>
 
@@ -161,11 +167,40 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="linconf-documentation">LinConf Documentation</h1>
-<p>Collection of Ansible roles following the orginizations Methodology.</p>
-<h1 id="overview">Overview</h1>
-<p>Support documents for <a href="https://www.ansible.com/">Ansible</a> roles published to <a href="https://github.com/linconf">LinConf on GitHub</a>.</p>
-<p>This is a placeholder for an introduction</p>
+                <h1>LinConf Documentation</h1>
+
+<p><a href="https://github.com/linconf">LinConf</a> is a collection of Ansible roles on GitHub
+targeted at Debian/Ubuntu and CentOS/RHEL systems.</p>
+<p>Each role is written with ease-of-use and ease-of-interpretation in mind. Released
+under the MIT license, roles also make good building blocks for more specialized
+roles.</p>
+<h2 id="design">Design</h2>
+<p>Roles are written with precedence given to the following (in order):</p>
+<ol>
+<li>Simplicity</li>
+<li>Dependency-Free</li>
+<li>Functionality</li>
+<li>Idempotance</li>
+</ol>
+<p><strong> Simplicity </strong> - Roles should be easy to read and easy to follow whenever possible.</p>
+<p><strong> Dependency-Free </strong> - Wherever practical, different functions are broken into different
+roles. If required dependency resolution and configuration isn't managed by a distributions
+package manager, it will likely require more than one role.</p>
+<p><strong> Functionality </strong> - Where possible and without sacrificing simplicity, roles are
+written to be as useful as possible (notably at the occasional expense of idempotance)</p>
+<p><strong> Idempotance </strong> - A very useful and important feature of Ansible, roles that fail
+to maintain idempotance will, where possible, present tags allowing idempotant 
+execution (by disabling some actions).</p>
+<h2 id="testing">Testing</h2>
+<p>Roles are tested locally using Vagrant or Docker as well as on each commit using
+Travis-CI. See the Testing page for more detailed information about testing methods.</p>
+<h2 id="author">Author</h2>
+<p>Chad Sheets - <a href="https://github.com/cjsheets">GitHub</a> | <a href="http://chadsheets.com/">Blog</a> | <a href="mailto:chad@linconf.com">Email</a></p>
+<h2 id="license">License</h2>
+<p>All LinConf authored roles are released under the <a href="https://tldrlegal.com/license/mit-license">MIT License</a>
+unless otherwise stated. Some roles posted in LinConf are forked from other repositories
+in which case their original license is retained. </p>
+<p><a href="https://github.com/linconf/ansible-users"><img alt="Analytics" src="https://cjs-beacon.appspot.com/UA-10006093-3/github/linconf/ansible-users?pixel" /></a></p>
               
             </div>
           </div>
@@ -173,7 +208,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about/methodology/" class="btn btn-neutral float-right" title="Methodology">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="about/testing/" class="btn btn-neutral float-right" title="Testing">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="ansible-users/" class="btn btn-neutral" title="ansible-users"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -207,7 +242,7 @@
         <span><a href="ansible-users/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="about/methodology/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="about/testing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
@@ -217,5 +252,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-10-07 02:38:34.611564
+Build Date UTC : 2016-10-07 04:38:19.753450
 -->
